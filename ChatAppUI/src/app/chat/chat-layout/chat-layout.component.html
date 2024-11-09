@@ -1,0 +1,11 @@
+<div class="chat-layout">
+  <app-room-list  class="left-panel" chatWindow.roomSelected = $event></app-room-list>
+    <app-chat-window class="right-panel" #chatWindow></app-chat-window>
+  </div>
+  
+
+   <!-- <div class="chat-layout">
+    <app-room-list  class="left-panel" (roomSelected)="roomIsSelected = $event"></app-room-list>
+      <app-chat-window class="right-panel" [roomSelected]="roomIsSelected"></app-chat-window>
+    </div>
+     -->

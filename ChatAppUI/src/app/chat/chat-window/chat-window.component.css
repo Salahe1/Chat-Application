@@ -1,0 +1,50 @@
+.chat-window {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    height: 400px; /* Fixed height for the chat window */
+    border: 1px solid #ccc; /* Optional: Border for visual clarity */
+  }
+  
+  .message-container {
+    flex: 1; /* Allow this div to take available space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Optional: Padding for spacing */
+    background-color: #f9f9f9; /* Optional: Background color */
+    border-bottom: 1px solid #ddd; /* Optional: Bottom border for separation */
+    height: 340px;
+  }
+  
+  .message-input {
+    padding: 10px; /* Space around input area */
+  }
+  
+  .placeholder-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #999;
+  }
+  .my-message {
+    background-color: #d1e7dd; /* Light green */
+    text-align: right;
+    margin: 5px 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .other-message {
+    background-color: #f1f1f1; /* Light gray */
+    text-align: left;
+    margin: 5px 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .room-header {
+    text-align: start;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+  

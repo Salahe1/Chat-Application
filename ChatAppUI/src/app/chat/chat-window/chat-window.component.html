@@ -1,0 +1,54 @@
+
+
+
+<div class="chat-window">
+
+  <div *ngIf="roomid !== 0" class="room-header">
+
+    <div class="ms-auto d-flex align-items-center">
+      <img src="assets/profileimage.jpg" alt="Profile" width="30" height="30" class="rounded-circle">
+      <h3 class="ps-3">{{ roomName }}</h3> <!-- Display the room name here -->
+    </div>
+    
+  </div>
+
+  <div *ngIf="roomid !== 0; else noRoomSelected">
+
+    <div class="message-container">
+      <div *ngFor="let message of messages" class="message">
+        <strong>{{ message.user }}:</strong> {{ message.text }}
+      </div>
+    </div> 
+
+    <app-message-input (messageSend)="sendMessage($event)"></app-message-input>
+
+  </div>
+  
+  <ng-template #noRoomSelected>
+
+    <div class="placeholder-message">
+      <h2>Please select a room to start chatting!</h2>
+    </div>
+
+  </ng-template>
+  
+</div>
+
+<!-- 
+
+
+<div *ngFor="let message of messages">
+  <div *ngIf="message.senderId === currentUserId; else otherMessage" class="my-message">
+    <p>{{ message.content }}</p>
+    <span>{{ message.timestamp | date:'short' }}</span>
+  </div>
+  <ng-template #otherMessage>
+    <div class="other-message">
+      <p>{{ message.content }}</p>
+      <span>{{ message.timestamp | date:'short' }}</span>
+    </div>
+  </ng-template>
+</div
+
+
+-->

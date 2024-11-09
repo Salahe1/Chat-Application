@@ -1,0 +1,47 @@
+
+  .room-list {
+    height:400px ;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #f9f9f9;
+  }
+  
+  .room-list h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .room-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .room-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .room-item:hover {
+    background-color: #e3e3e3;
+  }
+  
+  .room-name {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .room-users {
+    font-size: 14px;
+    color: #666;
+  }
+  

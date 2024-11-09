@@ -1,0 +1,41 @@
+<!-- header.component.html -->
+<div *ngIf="showHeader">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    
+    <a class="navbar-brand" routerLink="/">Chat App</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <form #searchContainer class="d-flex mx-auto position-relative search-form">
+        <input 
+          class="form-control me-2" 
+          type="search" 
+          placeholder="Search For other users" 
+          aria-label="Search"
+          [(ngModel)]="searchTerm" 
+          name="searchTerm"
+          (focus)="onFocus()" 
+          (input)="filterUsers()"
+          autocomplete="off"
+        >
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    
+        <!-- Display the filtered results -->
+          <ul *ngIf="isDropdownOpen && filteredUsers.length > 0" class="dropdown-list ">
+            <li *ngFor="let user of filteredUsers" (click)="onUserClick(user.id)">{{ user.username }}</li>
+          </ul>
+      </form>
+    
+      <!-- Right-Aligned Profile Icon -->
+      <div class="ms-auto d-flex align-items-center">
+        <img src="assets/profileimage.jpg" alt="Profile" width="30" height="30" class="rounded-circle">
+      </div>
+    </div>
+  </div>
+</nav>
+</div>

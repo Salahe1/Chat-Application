@@ -1,0 +1,34 @@
+
+
+
+
+
+<div class="d-flex justify-content-center  ">
+  <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="assets/chatapp.avif" width="220" height="220" class="d-inline-block align-top me-2" alt="dfsdfsfdsfs"> <!-- Updated margin class -->
+      <!-- Chat App  -->
+  </a>
+</div>
+
+<div class="container d-flex justify-content-center  vh-100">
+  <div class="login-form p-4 border rounded shadow bg-light" style="max-width: 500px;">
+    <h2 class="text-center mb-4">Se connecter</h2>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()"> <!-- Use Reactive Forms or add FormsModule to AppModule -->
+      <div class="mb-3">  <!-- form-group is no longer needed in Bootstrap 5 -->
+        <label for="username" class="form-label">Nom d'utilisateur</label> 
+        <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control" placeholder="Entrez votre nom d'utilisateur" required>  <!-- formControlName for Reactive Forms -->
+        <!-- Add validation feedback as needed -->
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Mot de passe</label>
+        <input type="password" id="password"  [(ngModel)]="password" name="password" class="form-control" placeholder="Entrez votre mot de passe" required>  <!-- formControlName for Reactive Forms -->
+        <!-- Add validation feedback as needed -->
+
+      </div>
+      <button type="submit" class="btn btn-primary w-100 mt-3">Se connecter</button> <!--btn-block replaced with w-100-->
+      <div class="text-center mt-3">
+        <a class="text-secondary" [routerLink]="['/user/register']">Mot de passe oublié?</a>
+        </div>
+    </form>
+  </div>
+</div>

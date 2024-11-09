@@ -1,0 +1,9 @@
+<div class="room-list">
+  <h2>Chat Rooms</h2>
+  <ul class="room-items">
+     <li *ngFor="let room of rooms" (click)="selectRoom(room.id)" class="room-item" >  <!--[ngClass]="{'active': room.isActive}" -->
+      <span class="room-name">{{ room.name }}</span>
+      <!-- <span class="room-users">({{ room.userCount }} users)</span> -->
+    </li>
+  </ul>
+</div>

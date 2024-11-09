@@ -1,0 +1,20 @@
+.chat-layout {
+    display: flex;
+    height: 430px; /* Make it full height */
+  }
+  
+  .left-panel {
+    flex: 1; /* Takes up 1 part of the space */
+    border-right: 1px solid #ddd; /* Optional border for separation */
+    padding: 16px; /* Spacing */
+    background-color: #f9f9f9; /* Background color */
+    max-width: 300px;
+  }
+  
+  .right-panel {
+    flex: 3; /* Takes up 3 parts of the space */
+    padding: 16px; /* Spacing */
+    background-color:  #f9f9f9; ; /* Background color */
+   
+  }
+  

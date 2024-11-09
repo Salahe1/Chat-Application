@@ -1,0 +1,29 @@
+/* Ensure the form is positioned relative so the dropdown can be placed absolutely */
+.position-relative {
+    position: relative;
+  }
+  
+  .dropdown-list {
+    position: absolute;
+    top: 100%; /* Align dropdown directly below the input */
+    left: 0;
+    width: 70%; /* Match the input width */
+    background-color: white;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .dropdown-list li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .dropdown-list li:hover {
+    background-color: #f0f0f0;
+  }
+  
